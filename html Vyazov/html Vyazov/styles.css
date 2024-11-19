@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bg{
+  height: 100vh;
+  width: 100%;
+  background-size: 150% 150%;
+  background-image: linear-gradient(-45deg, #00ffff 0%,#00ff1e 50%,#ffff00 100%);
+  animation: animateBG 10s infinite;
+}
+
+@keyframes animateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+#hello_image {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+}
+
+.container {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#demo {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  font-family: "Doto", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: #000000;
+  transition: transform 0.5s ease;
+}
+
+#demo:hover {
+  transform: scale(2);
+}
+
+.rotate {
+  animation: rotation 20s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
